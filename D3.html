@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>A mostly codeless intro to D3</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/ft.css" id="theme">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<!-- the character F is the FT logotype -->
+					<h2 class="logo">F</h2>
+				</section>
+				
+				<section>
+					<h2>Tom Pearson</h2>
+					<p>tom.pearson@ft.com
+					<p>@tomp
+				</section>
+
+				<section>
+					<h1>D3.js</h1>
+					A codeless introduction.
+				</section>
+				<section>
+					<img src="img/d3/D3Thesis.png">
+					<cite class="citation-link"><a href="http://vis.stanford.edu/files/2011-D3-InfoVis.pdf">vis.stanford.edu</a></cite>
+				</section>
+				<section>
+					<h1>We can do it!</h1>
+				</section>
+				<section>
+					<img src="img/d3/charttypology.png">
+					<h3>D3 is <em>not</em> a charting library</h3>
+				</section>
+				<section>
+					<h3>Elements of Data Visualizations</h3>
+					<ul>
+						<li>Data</li>
+						<li>Transformations</li>
+						<li>Scales/ coordinates</li>
+						<li>Elements</li>
+						<li>Guides</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Binding data to page elements</h3>
+					<img src="img/d3/selections1.png"><p>
+					<cite class="citation-link"><a href="http://bost.ocks.org/mike/selection">bost.ocks.org/mike/selection</a></cite>
+				</section>
+				<section>
+					<h3>Binding data to page elements</h3>
+					<img src="img/d3/selections2.png"><p>
+					<cite class="citation-link"><a href="http://bost.ocks.org/mike/selection">bost.ocks.org/mike/selection</a></cite>
+				</section>
+				<section>
+					<h2>Scales</h2>
+					map the properties of the data to attributes of the page elements
+					<img src="img/d3/d3scale1.png">
+					<p><cite class="citation-link"><a href="http://www.jeromecukier.net/blog/2011/08/11/d3-scales-and-color/">www.jeromecukier.net</a></cite>
+				</section>
+				<section>
+					<h2>Other useful bits</h2>
+				</section>
+				<section>
+					<h2>Data Transformation - Arrays</h2>
+					<ul>
+						<li>d3.min /d3.max</li>
+						<li>d3.extent</li>
+						<li>d3.mean/ d3.median/ d3.sum</li>
+						<li>d3.quantiles</li>
+						<li>etc.</li>
+						<li><em>D3 array documentation</em></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Data Loading</h2>
+					<ul>
+						<li>CSV/ TSV to an array of objects</li>
+						<li>Much smaller files than equivalent JSON or XML</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Guides</h2>
+					<ul>
+						<li>Axes</li>
+						<li>Keys</li>
+					</ul>
+				</section>
+				<section>
+					<h2>maps</h2>
+				</section>
+				<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks1.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks2.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks3.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks4.png"  height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks5.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks6.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks7.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks8.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks9.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks10.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks11.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks12.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+								<section>
+					<h3>Learn by example</h3>
+					<img src="img/d3/blocks13.png" height="500">
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
