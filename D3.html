@@ -16,7 +16,58 @@
 		<link rel="stylesheet" href="css/theme/ft.css" id="theme">
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+<style type="text/css">
+svg{
+	stroke: #000;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
 
+#rim {
+  fill: none;
+  stroke: #999;
+  stroke-width: 3px;
+}
+
+.second-hand{
+	stroke-width:3;
+
+}
+
+.minute-hand{
+	stroke-width:8;
+	stroke-linecap:round;
+}
+
+.hour-hand{
+	stroke-width:12;
+	stroke-linecap:round;
+}
+
+.hands-cover{
+	stroke-width:3;
+	fill:#fff;
+}
+
+.second-tick{
+	stroke-width:3;
+	fill:#000;	
+}
+
+.hour-tick{
+	stroke-width:8; //same as the miute hand
+}
+
+.second-label{
+	font-size: 12px;
+}
+
+.hour-label{
+	font-size: 24px;
+}
+
+
+</style>
+</style>
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
@@ -44,32 +95,64 @@
 					<p>tom.pearson@ft.com
 					<p>@tomp
 				</section>
-
 				<section>
-					<h1>D3.js</h1>
-					A codeless introduction.
+					<img src="img/d3/D3Thesis.png" height="100%">
 				</section>
 				<section>
-					<img src="img/d3/D3Thesis.png">
-					<cite class="citation-link"><a href="http://vis.stanford.edu/files/2011-D3-InfoVis.pdf">vis.stanford.edu</a></cite>
+					<img src="img/loyaltycard.png" height="100%">
 				</section>
 				<section>
-					<h1>We can do it!</h1>
+					<img src="img/chess.png" width="100%">
+				</section>
+				<section>
+					<img src="img/football.png" width="100%">
+				</section>
+				<section>
+					<img src="img/sequestrationmap.jpg" width="100%">
+				</section>
+				<section>
+					<h1>Myths<br> &<br> Misconceptions</h1>
+				</section>
+				<section>
+					<h2>It's hard!</h2>
 				</section>
 				<section>
 					<img src="img/d3/charttypology.png">
-					<h3>D3 is <em>not</em> a charting library</h3>
+					<h3>It's for making charts!</h3>
 				</section>
 				<section>
-					<h3>Elements of Data Visualizations</h3>
-					<ul>
-						<li>Data</li>
-						<li>Transformations</li>
-						<li>Scales/ coordinates</li>
-						<li>Elements</li>
-						<li>Guides</li>
-					</ul>
+					<h2>A design pattern for data viz</h2>
 				</section>
+				<section>
+					Data &rarr; Page elements
+				</section>
+				<section>
+					Data &rarr; Transformations &rarr; Scales &rarr; Page elements
+				</section>
+				<section>
+					<h2>Getting Data</h2>
+<pre>
+
+	d3.csv('mydata.csv', function(data){
+	   //Ta da!
+	});
+
+</pre>
+				</section>
+				<section>
+					<h2>Transforming data</h2>
+<pre>
+
+	d3.min(array[, accessor])    // & max
+	d3.extent(array[, accessor])
+	d3.mean(array[, accessor])   // & sum & median
+	d3.quantile(numbers, p)
+	d3.nest()                    //very powerful
+	// ...and loads more!
+
+</pre>
+				</section>
+
 				<section>
 					<h3>Binding data to page elements</h3>
 					<img src="img/d3/selections1.png"><p>
@@ -82,118 +165,27 @@
 				</section>
 				<section>
 					<h2>Scales</h2>
-					map the properties of the data to attributes of the page elements
+					map the <em>properties</em> of the data to <em>attributes</em> of the page elements
 					<img src="img/d3/d3scale1.png">
 					<p><cite class="citation-link"><a href="http://www.jeromecukier.net/blog/2011/08/11/d3-scales-and-color/">www.jeromecukier.net</a></cite>
+				</section>			
+				<section>
+					<h2>Learn by example</h2>
+					<p>
+					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
 				</section>
 				<section>
-					<h2>Other useful bits</h2>
+					<img src="img/d3/blocks1.png" height="100%">
+					<p>
 				</section>
 				<section>
-					<h2>Data Transformation - Arrays</h2>
-					<ul>
-						<li>d3.min /d3.max</li>
-						<li>d3.extent</li>
-						<li>d3.mean/ d3.median/ d3.sum</li>
-						<li>d3.quantiles</li>
-						<li>etc.</li>
-						<li><em>D3 array documentation</em></li>
-					</ul>
+					<img src="img/d3/blocks2.png" height="100%">
+					<p>
 				</section>
 				<section>
-					<h2>Data Loading</h2>
-					<ul>
-						<li>CSV/ TSV to an array of objects</li>
-						<li>Much smaller files than equivalent JSON or XML</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Guides</h2>
-					<ul>
-						<li>Axes</li>
-						<li>Keys</li>
-					</ul>
-				</section>
-				<section>
-					<h2>maps</h2>
-				</section>
-				<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks1.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks2.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks3.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks4.png"  height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks5.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks6.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks7.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks8.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks9.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks10.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks11.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks12.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
-				</section>
-								<section>
-					<h3>Learn by example</h3>
-					<img src="img/d3/blocks13.png" height="500">
-					<p>
-					<cite><a href="http://bl.ocks.org/mbostock">bl.ocks.org/mbostock</a></cite>
+					<div id="clock">
+					</div>
+					<h3>d3js.org</h3>
 				</section>
 			</div>
 
@@ -201,7 +193,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-
+		<script src="js/d3.v3.min.js"></script>
 		<script>
 
 			// Full list of configuration options available here:
@@ -213,7 +205,7 @@
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
@@ -228,6 +220,180 @@
 				]
 			});
 
+		</script>
+		<script>
+
+var radians = 0.0174532925, 
+	clockRadius = 200,
+	margin = 50,
+	width = (clockRadius+margin)*2,
+    height = (clockRadius+margin)*2,
+    hourHandLength = 2*clockRadius/3,
+    minuteHandLength = clockRadius,
+    secondHandLength = clockRadius-12,
+    secondHandBalance = 30,
+    secondTickStart = clockRadius;
+    secondTickLength = -10,
+    hourTickStart = clockRadius,
+    hourTickLength = -18
+    secondLabelRadius = clockRadius + 16;
+    secondLabelYOffset = 5
+    hourLabelRadius = clockRadius - 40
+    hourLabelYOffset = 7;
+
+
+var hourScale = d3.scale.linear()
+	.range([0,330])
+	.domain([0,11]);
+
+var minuteScale = secondScale = d3.scale.linear()
+	.range([0,354])
+	.domain([0,59]);
+
+var handData = [
+	{
+		type:'hour',
+		value:0,
+		length:-hourHandLength,
+		scale:hourScale
+	},
+	{
+		type:'minute',
+		value:0,
+		length:-minuteHandLength,
+		scale:minuteScale
+	},
+	{
+		type:'second',
+		value:0,
+		length:-secondHandLength,
+		scale:secondScale,
+		balance:secondHandBalance
+	}
+];
+
+function drawClock(){ //create all the clock elements
+	updateData();	//draw them in the correct starting position
+	var svg = d3.select("#clock").append("svg")
+	    .attr("width", width)
+	    .attr("height", height);
+
+	var face = svg.append('g')
+		.attr('id','clock-face')
+		.attr('transform','translate(' + (clockRadius + margin) + ',' + (clockRadius + margin) + ')');
+
+	//add marks for seconds
+	face.selectAll('.second-tick')
+		.data(d3.range(0,60)).enter()
+			.append('line')
+			.attr('class', 'second-tick')
+			.attr('x1',0)
+			.attr('x2',0)
+			.attr('y1',secondTickStart)
+			.attr('y2',secondTickStart + secondTickLength)
+			.attr('transform',function(d){
+				return 'rotate(' + secondScale(d) + ')';
+			});
+	//and labels
+
+	face.selectAll('.second-label')
+		.data(d3.range(5,61,5))
+			.enter()
+			.append('text')
+			.attr('class', 'second-label')
+			.attr('text-anchor','middle')
+			.attr('x',function(d){
+				return secondLabelRadius*Math.sin(secondScale(d)*radians);
+			})
+			.attr('y',function(d){
+				return -secondLabelRadius*Math.cos(secondScale(d)*radians) + secondLabelYOffset;
+			})
+			.text(function(d){
+				return d;
+			});
+
+	//... and hours
+	face.selectAll('.hour-tick')
+		.data(d3.range(0,12)).enter()
+			.append('line')
+			.attr('class', 'hour-tick')
+			.attr('x1',0)
+			.attr('x2',0)
+			.attr('y1',hourTickStart)
+			.attr('y2',hourTickStart + hourTickLength)
+			.attr('transform',function(d){
+				return 'rotate(' + hourScale(d) + ')';
+			});
+
+	face.selectAll('.hour-label')
+		.data(d3.range(3,13,3))
+			.enter()
+			.append('text')
+			.attr('class', 'hour-label')
+			.attr('text-anchor','middle')
+			.attr('x',function(d){
+				return hourLabelRadius*Math.sin(hourScale(d)*radians);
+			})
+			.attr('y',function(d){
+				return -hourLabelRadius*Math.cos(hourScale(d)*radians) + hourLabelYOffset;
+			})
+			.text(function(d){
+				return d;
+			});
+
+
+	var hands = face.append('g').attr('id','clock-hands');
+
+	face.append('g').attr('id','face-overlay')
+		.append('circle').attr('class','hands-cover')
+			.attr('x',0)
+			.attr('y',0)
+			.attr('r',clockRadius/20);
+
+	hands.selectAll('line')
+		.data(handData)
+			.enter()
+			.append('line')
+			.attr('class', function(d){
+				return d.type + '-hand';
+			})
+			.attr('x1',0)
+			.attr('y1',function(d){
+				return d.balance ? d.balance : 0;
+			})
+			.attr('x2',0)
+			.attr('y2',function(d){
+				return d.length;
+			})
+			.attr('transform',function(d){
+				return 'rotate('+ d.scale(d.value) +')';
+			});
+		}
+
+		function moveHands(){
+			d3.select('#clock-hands').selectAll('line')
+			.data(handData)
+				.transition()
+				.attr('transform',function(d){
+					return 'rotate('+ d.scale(d.value) +')';
+				});
+		}
+
+		function updateData(){
+			var t = new Date();
+			handData[0].value = (t.getHours() % 12) + t.getMinutes()/60 ;
+			handData[1].value = t.getMinutes();
+			handData[2].value = t.getSeconds();
+		}
+
+		drawClock();
+
+		setInterval(function(){
+			updateData();
+			moveHands();
+		}, 1000);
+
+		d3.select(self.frameElement).style("height", height + "px");
 		</script>
 
 	</body>
